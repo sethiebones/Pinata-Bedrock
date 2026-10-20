@@ -1,0 +1,63 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "vp:dizzy",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particles/star"
+			}
+		},
+		"components": {
+			"minecraft:emitter_local_space": {
+				"position": true,
+				"rotation": true
+			},
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 10,
+				"max_particles": 11
+			},
+			"minecraft:emitter_lifetime_expression": {
+				"activation_expression": 1,
+				"expiration_expression": "variable.emitter_age > 2 || !query.property('vp:dizzy') || query.property('vp:busted') || query.property('vp:sick')  || query.property('vp:fighting') || query.property('vp:attacking') || query.property('vp:cocoon')"
+			},
+			"minecraft:emitter_shape_point": {
+				"offset": [
+					"0.15 * math.sin(variable.emitter_age * 360)",
+					-0.5,
+					"0.15 * math.cos(variable.emitter_age * 360)"
+				],
+				"direction": [
+					0,
+					0,
+					0
+				]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 1,
+				"expiration_expression": "!query.property('vp:dizzy') || query.property('vp:busted') || query.property('vp:sick')  || query.property('vp:fighting') || query.property('vp:attacking') || query.property('vp:cocoon')"
+			},
+			"minecraft:particle_initial_speed": 1,
+			"minecraft:particle_motion_dynamic": {},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					0.05,
+					0.05
+				],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [
+						0,
+						0
+					],
+					"uv_size": [
+						16,
+						16
+					]
+				}
+			}
+		}
+	}
+}

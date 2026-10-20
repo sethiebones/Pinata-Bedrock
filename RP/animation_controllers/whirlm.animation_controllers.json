@@ -1,0 +1,345 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.whirlm.controller": {
+			"initial_state": "idle",
+			"states": {
+				"egg_idle": {
+					"animations": [
+						{
+							"egg_idle": "query.variant == 5"
+						},
+						{
+							"bust": "query.property('vp:busted')"
+						}
+					],
+					"transitions": [
+						{
+							"hatching": "query.variant == 6"
+						},
+						{
+							"idle": "query.variant != 5"
+						}
+					]
+				},
+				"hatching": {
+					"animations": [
+						{
+							"hatching": "query.variant == 6"
+						},
+						{
+							"bust": "query.property('vp:busted')"
+						}
+					],
+					"transitions": [
+						{
+							"idle": "query.variant != 6"
+						}
+					]
+				},
+				"idle": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"egg_idle": "query.variant == 5"
+						},
+						{
+							"bust": "query.property('vp:busted')"
+						},
+						{
+							"walking": "q.ground_speed>0.5&&q.ground_speed<1.5 && !(q.is_leashed && !q.is_on_ground)"
+						},
+						{
+							"sleep": "q.is_sleeping && !(q.is_leashed && !q.is_on_ground)"
+						},
+						{
+							"run": "q.ground_speed>=1.5 && !(q.is_leashed && !q.is_on_ground)"
+						},
+						{
+							"eating": "q.is_admiring"
+						},
+						{
+							"fight_idle": "query.property('vp:fighting')"
+						},
+						{
+							"sick": "query.property('vp:sick') && !(q.is_leashed && !q.is_on_ground)"
+						},
+						{
+							"attacking": "query.property('vp:attacking')"
+						},
+						{
+							"dizzy": "query.property('vp:dizzy') && !(q.is_leashed && !q.is_on_ground)"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"walking": {
+					"animations": [
+						{
+							"walk": "!q.is_wall_climbing"
+						},
+						{
+							"climb": "q.is_wall_climbing"
+						}
+					],
+					"transitions": [
+						{
+							"bust": "query.property('vp:busted')"
+						},
+						{
+							"idle": "q.ground_speed<0.5 || (q.is_leashed && !q.is_on_ground)"
+						},
+						{
+							"sleep": "q.is_sleeping"
+						},
+						{
+							"run": "q.ground_speed>=1.5"
+						},
+						{
+							"eating": "q.is_admiring"
+						},
+						{
+							"dizzy": "query.property('vp:dizzy')"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"run": {
+					"animations": [
+						"run"
+					],
+					"transitions": [
+						{
+							"bust": "query.property('vp:busted')"
+						},
+						{
+							"idle": "q.ground_speed<0.5 || (q.is_leashed && !q.is_on_ground)"
+						},
+						{
+							"walking": "q.ground_speed>0.5&&q.ground_speed<1.4"
+						},
+						{
+							"sleep": "q.is_sleeping"
+						},
+						{
+							"eating": "q.is_admiring"
+						},
+						{
+							"dizzy": "query.property('vp:dizzy')"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"sleep": {
+					"animations": [
+						"sleep"
+					],
+					"transitions": [
+						{
+							"bust": "query.property('vp:busted')"
+						},
+						{
+							"idle": "!q.is_sleeping || (q.is_leashed && !q.is_on_ground)"
+						},
+						{
+							"dizzy": "query.property('vp:dizzy')"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"eating": {
+					"animations": [
+						"eating"
+					],
+					"transitions": [
+						{
+							"bust": "query.property('vp:busted')"
+						},
+						{
+							"idle": "!q.is_admiring&&q.ground_speed<0.5 || (q.is_leashed && !q.is_on_ground)"
+						},
+						{
+							"walking": "!q.is_admiring&&q.ground_speed>0.5&&q.ground_speed<1.5"
+						},
+						{
+							"sleep": "!q.is_admiring&&q.is_sleeping"
+						},
+						{
+							"dizzy": "query.property('vp:dizzy')"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"fight_idle": {
+					"animations": [
+						"awaiting_attack"
+					],
+					"transitions": [
+						{
+							"bust": "query.property('vp:busted')"
+						},
+						{
+							"idle": "(q.ground_speed<0.5 && !q.property('vp:fighting'))"
+						},
+						{
+							"egg_idle": "query.variant == 5 && !q.property('vp:fighting')"
+						},
+						{
+							"walking": "q.ground_speed>0.5&&q.ground_speed<1.5 && !q.property('vp:fighting')"
+						},
+						{
+							"sleep": "q.is_sleeping && !q.property('vp:fighting')"
+						},
+						{
+							"run": "q.ground_speed>=1.5 && !q.property('vp:fighting')"
+						},
+						{
+							"eating": "q.is_admiring && !q.property('vp:fighting')"
+						},
+						{
+							"attacking": "query.property('vp:attacking')"
+						},
+						{
+							"dodging": "query.property('vp:dodging')"
+						},
+						{
+							"dizzy": "query.property('vp:dizzy')"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"attacking": {
+					"animations": [
+						"attack"
+					],
+					"transitions": [
+						{
+							"bust": "query.property('vp:busted')"
+						},
+						{
+							"fight_idle": "!q.property('vp:attacking')"
+						},
+						{
+							"taunting": "query.all_animations_finished"
+						},
+						{
+							"dizzy": "query.property('vp:dizzy')"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"taunting": {
+					"animations": [
+						"taunt"
+					],
+					"transitions": [
+						{
+							"bust": "query.property('vp:busted')"
+						},
+						{
+							"fight_idle": "!q.property('vp:attacking')"
+						},
+						{
+							"dizzy": "query.property('vp:dizzy')"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"dodging": {
+					"animations": [
+						"dodge"
+					],
+					"transitions": [
+						{
+							"bust": "query.property('vp:busted')"
+						},
+						{
+							"fight_idle": "!q.property('vp:dodging')"
+						},
+						{
+							"dizzy": "query.property('vp:dizzy')"
+						}
+					]
+				},
+				"sick": {
+					"animations": [
+						"sick"
+					],
+					"transitions": [
+						{
+							"bust": "query.property('vp:busted')"
+						},
+						{
+							"idle": "!query.property('vp:sick') || (q.is_leashed && !q.is_on_ground)"
+						},
+						{
+							"dizzy": "query.property('vp:dizzy')"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"dizzy": {
+					"animations": [
+						"dizzy"
+					],
+					"transitions": [
+						{
+							"bust": "query.property('vp:busted')"
+						},
+						{
+							"idle": "!query.property('vp:dizzy') || (q.is_leashed && !q.is_on_ground)"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"bust": {
+					"animations": [
+						"bust"
+					],
+					"transitions": [
+						{
+							"busted": "query.all_animations_finished"
+						}
+					]
+				},
+				"busted": {
+					"animations": [
+						"busted"
+					],
+					"transitions": [
+						{
+							"idle": "!query.property('vp:busted')"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.whirlm.romance.controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"nomance"
+					],
+					"transitions": [
+						{
+							"romance": "query.property('vp:breedable') && !query.property('vp:dizzy') && !query.property('vp:sick') && !query.property('vp:busted') && !query.property('vp:fighting') && !query.property('vp:attacking')"
+						}
+					]
+				},
+				"romance": {
+					"animations": [
+						"romance"
+					],
+					"transitions": [
+						{
+							"default": "!query.property('vp:breedable') || query.property('vp:dizzy') || query.property('vp:sick') || query.property('vp:busted') || query.property('vp:fighting') || query.property('vp:attacking')"
+						}
+					]
+				}
+			}
+		}
+	}
+}

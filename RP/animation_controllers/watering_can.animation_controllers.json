@@ -1,0 +1,43 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.watering_can.controller": {
+			"initial_state": "start_pouring",
+			"states": {
+				"start_pouring": {
+					"animations": [
+						"start_pouring"
+					],
+					"transitions": [
+						{
+							"pouring": "query.all_animations_finished"
+						}
+					]
+				},
+				"pouring": {
+					"animations": [
+						"pouring"
+					],
+					"transitions": [
+						{
+							"stop_pouring": "query.property('vp:pour_duration') == 0"
+						}
+					]
+				},
+				"stop_pouring": {
+					"animations": [
+						"stop_pouring"
+					],
+					"transitions": [
+						{
+							"start_pouring": "query.property('vp:pour_duration') > 0"
+						}
+						// ,{
+						// 	"idle": "query.all_animations_finished"
+						// }
+					]
+				}
+			}
+		}
+	}
+}

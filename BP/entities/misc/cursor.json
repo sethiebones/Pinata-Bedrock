@@ -1,0 +1,200 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "vp:cursor",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"vp:cursor_state": {
+					"type": "enum",
+					"default": "default",
+					"values": [
+						"default",
+						"inner",
+						"outer"
+					],
+					"client_sync": true
+				},
+				"vp:in_garden": {
+					"type": "bool",
+					"default": true,
+					"client_sync": true
+				}
+			}
+		},
+		"component_groups": {
+			"vp:collision": {
+				"minecraft:physics": {
+					"has_collision": true,
+					"has_gravity": true
+				},
+				"minecraft:collision_box": {
+					"height": 0,
+					"width": 1
+				}
+			},
+			"vp:no_collision": {
+				"minecraft:physics": {
+					"has_collision": false,
+					"has_gravity": true
+				},
+				"minecraft:collision_box": {
+					"height": 0,
+					"width": 0
+				}
+			},
+			"vp:size_default": {
+				"minecraft:scale": {
+					"value": 1
+				}
+			},
+			"vp:size_half": {
+				"minecraft:scale": {
+					"value": 0.5
+				}
+			}
+		},
+		"components": {
+			"minecraft:is_baby": {},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:rideable": {
+				"controlling_seat": 0,
+				"seats": [
+					{
+						"position": [
+							0,
+							0,
+							0
+						]
+					}
+				],
+				"family_types": [
+					"pinata"
+				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "is_sneaking",
+										"subject": "other",
+										"value": false
+									}
+								]
+							}
+						}
+					}
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"trigger": "vp:size_default"
+					},
+					{
+						"trigger": "vp:collision"
+					}
+				]
+			},
+			"vp:collision": {
+				"remove": {
+					"component_groups": [
+						"vp:no_collision"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"vp:collision"
+					]
+				}
+			},
+			"vp:no_collision": {
+				"remove": {
+					"component_groups": [
+						"vp:collision"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"vp:no_collision"
+					]
+				}
+			},
+			"vp:default": {
+				"set_property": {
+					"vp:cursor_state": "default"
+				}
+			},
+			"vp:inner": {
+				"set_property": {
+					"vp:cursor_state": "inner"
+				}
+			},
+			"vp:outer": {
+				"set_property": {
+					"vp:cursor_state": "outer"
+				}
+			},
+			"vp:size_default": {
+				"remove": {
+					"component_groups": [
+						"vp:size_half"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"vp:size_default"
+					]
+				}
+			},
+			"vp:size_half": {
+				"remove": {
+					"component_groups": [
+						"vp:size_default"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"vp:size_half"
+					]
+				}
+			},
+			"vp:in_garden": {
+				"set_property": {
+					"vp:in_garden": true
+				},
+				"queue_command": {
+					"command": "playsound vp.cursor_garden @p ~~~ 1 1"
+				}
+			},
+			"vp:out_garden": {
+				"set_property": {
+					"vp:in_garden": false
+				},
+				"queue_command": {
+					"command": "playsound vp.cursor_garden @p ~~~ 1 1"
+				}
+			}
+		}
+	}
+}

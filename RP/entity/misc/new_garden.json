@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "vp:new_garden",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/empty"
+			},
+			"geometry": {
+				"default": "geometry.new_garden"
+			},
+			"render_controllers": [
+				"controller.render.new_garden"
+			]
+		}
+	}
+}

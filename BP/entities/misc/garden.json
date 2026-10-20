@@ -1,0 +1,110 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "vp:garden",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"vp:radius": {
+					"type": "int",
+					"default": 8,
+					"range": [
+						0,
+						64
+					],
+					"client_sync": true
+				},
+				"vp:offset_x": {
+					"type": "int",
+					"default": 0,
+					"range": [
+						-128,
+						128
+					],
+					"client_sync": true
+				},
+				"vp:offset_y": {
+					"type": "int",
+					"default": 0,
+					"range": [
+						-768,
+						768
+					],
+					"client_sync": true
+				},
+				"vp:offset_z": {
+					"type": "int",
+					"default": 0,
+					"range": [
+						-128,
+						128
+					],
+					"client_sync": true
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"garden"
+				]
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": false
+			},
+			"minecraft:collision_box": {
+				"width": 0.5,
+				"height": 0.5
+			},
+			"minecraft:breathable": {
+				"breathes_water": true
+			},
+			"minecraft:physics": {
+				"has_gravity": true,
+				"has_collision": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"deals_damage": false
+				}
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:timer": {
+				"looping": true,
+				"time": 60,
+				"time_down_event": {
+					"event": "vp:detect",
+					"target": "self"
+				}
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							}
+						}
+					}
+				]
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"trigger": "vp:detect"
+			},
+			"vp:detect": {},
+			"vp:detect_entities": {}
+		}
+	}
+}

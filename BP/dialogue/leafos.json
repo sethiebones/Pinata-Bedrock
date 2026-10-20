@@ -1,0 +1,1411 @@
+{
+    "format_version": "1.21.30",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "vp:leafos_intro",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_intro"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "execute as @initiator unless entity @e[tag=true_leafos, r=32] run tp @e[tag=true_leafos, r=1] @s"
+                ],
+                "on_close_commands": [
+                    "event entity @s vp:stop_cry",
+                    "event entity @s vp:disable",
+                    "dialogue open @s @initiator vp:leafos_give_journal",
+                    "replaceitem entity @s slot.weapon.mainhand 0 vp:journal",
+                    "tag @s add has_journal"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_give_journal",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_give_journal"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "replaceitem entity @s slot.weapon.mainhand 0 air",
+                    "give @initiator vp:journal",
+                    "dialogue open @s @initiator vp:leafos_garden_intro",
+                    "tag @s remove has_journal"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_garden_intro",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_garden_intro"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "tag @initiator add awaiting_garden_claiming"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_shovel_intro",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_shovel_intro"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "tag @initiator remove awaiting_garden_claiming",
+                    "replaceitem entity @s slot.weapon.mainhand 0 vp:freebie_shovel",
+                    "tag @s add has_shovel",
+                    //"tag @initiator add needs_shovel",
+                    //"event entity @s vp:give_shovel"
+                    "dialogue change @s vp:leafos_give_shovel @initiator"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_give_shovel",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_give_shovel"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "replaceitem entity @s slot.weapon.mainhand 0 air",
+                    "give @initiator vp:freebie_shovel",
+                    "tag @s remove has_shovel",
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_0",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_1"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_1",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_1"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_2",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_2"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_3",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_3"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_4",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_4"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_5",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_5"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_6",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_6"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_7",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_7"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_8",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_8"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_9",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_9"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_10",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_10"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_11",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_11"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_12",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_12"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_13",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_13"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_14",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_14"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_15",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_15"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_16",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_16"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_17",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_17"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_18",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_18"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_19",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_19"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_20",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_20"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_21",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_21"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_22",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_22"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_23",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_23"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_24",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_24"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_25",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_25"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_26",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_26"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_27",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_27"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_28",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_28"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_29",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_29"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_30",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_30"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_31",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_31"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_32",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_32"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_33",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_33"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_34",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_34"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_35",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_35"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_36",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_36"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_37",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_37"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_38",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_38"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_39",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_39"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_40",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_40"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_41",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_41"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_42",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_42"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_43",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_43"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_44",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_44"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_45",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_45"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_46",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_46"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_47",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_47"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_48",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_48"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_49",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_49"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_50",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_50"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_51",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_51"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_52",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_52"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_53",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_53"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_54",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_54"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_55",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_55"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_56",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_56"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_57",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_57"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_58",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_58"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_59",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_59"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_60",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_60"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_61",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_61"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_62",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_62"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_63",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_63"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_64",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_64"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_65",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_65"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_66",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_66"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_67",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_67"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_68",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_68"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_69",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_69"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_70",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_70"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_71",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_71"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_72",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_72"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_73",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_73"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_74",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_74"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_75",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_75"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_76",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_76"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_77",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_77"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_78",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_78"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_79",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_79"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_80",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_80"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_81",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_81"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_82",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_82"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_83",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_83"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_84",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_84"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_85",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_85"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_86",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_86"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_87",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_87"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_88",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_88"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_89",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_89"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:leafos_90",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.leafos_90"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:whirlm_appear",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.whirlm.appear"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:whirlm_visit",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.whirlm.visit"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            },
+            {
+                "scene_tag": "vp:whirlm_resident",
+                "npc_name": "Leafos",
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "accessibility.whirlm.resident"
+                        }
+                    ]
+                },
+                "on_close_commands": [
+                    "event entity @s vp:enable"
+                ]
+            }
+        ]
+    }
+}

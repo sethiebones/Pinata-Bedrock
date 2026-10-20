@@ -1,0 +1,122 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.freebie_watering_can.hold_third_person": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"position": [
+						0,
+						0,
+						-10
+					],
+					"scale": 0.4
+				}
+			}
+		},
+		"animation.freebie_watering_can.hold_first_person": {
+			"loop": true,
+			"bones": {
+				"rightitem": {
+					"position": [
+						-10,
+						0,
+						0
+					],
+					"rotation": [
+						45,
+						45,
+						-90
+					],
+					"scale": 0.6
+				}
+			}
+		},
+		"animation.freebie_watering_can_entity.start_pouring": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25,
+			"bones": {
+				"rightitem": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.25": [
+							27.5,
+							0,
+							0
+						]
+					},
+					"position": [
+						0,
+						24,
+						16
+					]
+				}
+			}
+		},
+		"animation.freebie_watering_can_entity.stop_pouring": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.25,
+			"bones": {
+				"rightitem": {
+					"rotation": {
+						"0.0": [
+							27.5,
+							0,
+							0
+						],
+						"0.25": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": [
+						0,
+						24,
+						16
+					]
+				}
+			}
+		},
+		"animation.freebie_watering_can_entity.pouring": {
+			"loop": true,
+			"animation_length": 0.7083,
+			"bones": {
+				"rightitem": {
+					"rotation": {
+						"0.0": [
+							27.5,
+							0,
+							0
+						],
+						"0.3333": [
+							20,
+							0,
+							0
+						],
+						"0.7083": [
+							27.5,
+							0,
+							0
+						]
+					},
+					"position": [
+						0,
+						24,
+						16
+					]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "pouring",
+					"locator": "locator"
+				}
+			}
+		}
+	}
+}

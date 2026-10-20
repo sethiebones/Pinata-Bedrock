@@ -1,0 +1,319 @@
+{
+  "format_version": "1.21.110",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vp:leafos",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "vp:crying": {
+          "type": "bool",
+          "default": false,
+          "client_sync": true
+        }
+      }
+    },
+    "component_groups": {
+      "vp:enabled": {
+        "minecraft:movement": {
+          "value": 0.5
+        },
+        "minecraft:navigation.walk": {
+          "can_path_over_water": true,
+          "can_pass_doors": true,
+          "can_open_doors": false,
+          "avoid_water": true
+        },
+        "minecraft:movement.basic": {},
+        "minecraft:behavior.random_stroll": {
+          "priority": 7,
+          "speed_multiplier": 0.6
+        }
+      },
+      "vp:camera": {
+        "minecraft:timer": {
+          "looping": true,
+          "time": 0.1,
+          "time_down_event": {
+            "event": "vp:camera_queue"
+          }
+        }
+      },
+      "vp:die": {
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:scale": {
+        "value": 0.8
+      },
+      "minecraft:type_family": {
+        "family": ["mob", "family", "leafos", "npc"]
+      },
+      "minecraft:nameable": {
+        "allow_name_tag_renaming": false,
+        "always_show": true
+      },
+      "minecraft:npc": {
+        "npc_data": {
+          "portrait_offsets": {
+            "scale": [1.5, 1.5, 1.5],
+            "translate": [0, 24, 0]
+          }
+        }
+      },
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": 1
+      },
+      "minecraft:health": {
+        "value": 2006,
+        "max": 2006
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:knockback_resistance": {
+        "value": 1
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.9
+      },
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:behavior.float": {
+        "priority": 0
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      // "minecraft:despawn": {
+      // 	"despawn_from_distance": {
+      // 		"min_distance": 32
+      // 	},
+      // 	"despawn_from_chance": true
+      // },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8,
+        "look_distance": 8,
+        "probability": 0.02
+      },
+      "minecraft:behavior.random_look_around": {
+        "priority": 9
+      },
+      "minecraft:physics": {},
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:interact": {
+        "interactions": [
+          {
+            "cooldown": 10,
+            "on_interact": {},
+            "swing": true
+          }
+        ]
+      },
+      "minecraft:equippable": {},
+      "minecraft:damage_sensor": {
+        "triggers": [
+          {
+            "cause": "all",
+            "damage_multiplier": 0
+          },
+          {
+            "cause": "entity_attack",
+            "on_damage": {
+              "filters": {
+                "subject": "damager",
+                "test": "is_family",
+                "operator": "==",
+                "value": "player"
+              },
+              "event": "vp:player_hit"
+            }
+          }
+        ]
+      },
+      "minecraft:behavior.follow_mob": {
+        "priority": 0,
+        "search_range": 1000,
+        "start_distance": 40,
+        "stop_distance": 5,
+        "speed_multiplier": 0.8,
+        "use_home_position_restriction": false,
+        "preferred_actor_type": "vp:garden",
+        "filters": {
+          "any_of": [
+            {
+              "all_of": [
+                {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "garden"
+                }
+                // ,
+                // {
+                // 	"any_of": [
+                // 		{
+                // 			"test": "hourly_clock_time",
+                // 			"operator": ">",
+                // 			"value": 22000
+                // 		},
+                // 		{
+                // 			"test": "hourly_clock_time",
+                // 			"operator": "<",
+                // 			"value": 6000
+                // 		}
+                // 	]
+                // }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "minecraft:entity_born": {
+        "sequence": [
+          // 	{
+          // 		"queue_command": {
+          // 			"command": "execute unless score @p seedos_spotted matches 1 run event entity @s vp:set_camera"
+          // 		}
+          // 	},
+          // 	{
+          // 		"queue_command": {
+          // 			"command": "execute unless score @p seedos_spotted matches 1 run tag @s add first_spotted"
+          // 		}
+          // 	},
+          // 	{
+          // 		"queue_command": {
+          // 			"command": "execute as @e[type=vp:leafos, tag=first_spotted] unless score @p seedos_spotted matches 1 run scoreboard players set @p seedos_spotted 1"
+          // 		}
+          // 	},
+          {
+            "trigger": "vp:enable"
+          }
+        ]
+      },
+      "minecraft:entity_spawned": {
+        "sequence": [
+          // 	{
+          // 		"queue_command": {
+          // 			"command": "execute unless score @p seedos_spotted matches 1 run event entity @s vp:set_camera"
+          // 		}
+          // 	},
+          // 	{
+          // 		"queue_command": {
+          // 			"command": "execute unless score @p seedos_spotted matches 1 run tag @s add first_spotted"
+          // 		}
+          // 	},
+          // 	{
+          // 		"queue_command": {
+          // 			"command": "execute as @e[type=vp:leafos, tag=first_spotted] unless score @p seedos_spotted matches 1 run scoreboard players set @p seedos_spotted 1"
+          // 		}
+          // 	},
+          {
+            "trigger": "vp:enable"
+          }
+        ]
+      },
+      "vp:enable": {
+        "add": {
+          "component_groups": ["vp:enabled"]
+        }
+      },
+      "vp:disable": {
+        "remove": {
+          "component_groups": ["vp:enabled"]
+        }
+      },
+      "vp:cry": {
+        "set_property": {
+          "vp:crying": true
+        },
+        "trigger": {
+          "event": "vp:disable"
+        }
+      },
+      "vp:stop_cry": {
+        "set_property": {
+          "vp:crying": false
+        },
+        "trigger": {
+          "event": "vp:enable"
+        }
+      },
+      "vp:give_journal": {
+        "queue_command": {
+          "command": "give @p vp:journal 1"
+        }
+      },
+      "vp:give_shovel": {
+        "queue_command": {
+          "command": "dialogue open @s @initiator vp:leafos_give_shovel"
+        }
+      },
+      "vp:player_hit": {
+        "add": {
+          "component_groups": []
+        }
+      },
+      "vp:set_camera": {
+        "sequence": [
+          {
+            "add": {
+              "component_groups": ["vp:camera"]
+            }
+          },
+          {
+            "queue_command": {
+              "command": "scoreboard players set camera_timer ticks 1"
+            }
+          }
+        ]
+      },
+      "vp:clear_camera": {
+        "sequence": [
+          {
+            "remove": {
+              "component_groups": ["vp:camera"]
+            }
+          },
+          {
+            "queue_command": {
+              "command": "camera @a clear"
+            }
+          }
+        ]
+      },
+      "vp:camera_queue": {
+        "sequence": [
+          {
+            "queue_command": {
+              "command": "execute unless entity @e[tag=camera] run tag @s add camera"
+            }
+          }
+        ]
+      },
+      "vp:die": {
+        "add": {
+          "component_groups": ["vp:die"]
+        }
+      }
+    }
+  }
+}

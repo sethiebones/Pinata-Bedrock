@@ -1,0 +1,50 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.label_border_back": {
+			"geometry": "Geometry.label_border_back",
+			"materials": [
+				{
+					"*": "material.label"
+				}
+			],
+			"textures": [
+				"array.skins[query.property('vp:label_border_back') + 1]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.label_empty",
+						"Texture.label_border_tris_1_0",
+						"Texture.label_border_tris_1_1",
+						"Texture.label_border_tris_1_2",
+						"Texture.label_border_tris_1_3",
+						"Texture.label_border_tris_1_4",
+						"Texture.label_border_tris_1_5",
+						"Texture.label_border_tris_1_6",
+						"Texture.label_border_tris_1_7",
+						"Texture.label_border_tris_1_8",
+						"Texture.label_border_tris_1_9",
+						"Texture.label_border_tris_1_10",
+						"Texture.label_border_tris_1_11",
+						"Texture.label_border_tris_1_12",
+						"Texture.label_border_tris_1_13",
+						"Texture.label_border_tris_1_14",
+						"Texture.label_border_tris_1_15"
+					]
+				}
+			},
+			"is_hurt_color": {
+				"r": 1,
+				"g": 1,
+				"b": 1,
+				"a": 0
+			},
+			"part_visibility": [
+				{
+					"*": "!query.property('vp:busted') && !query.property('vp:egg') && !query.property('vp:cocoon')"
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,89 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.whirlm_missile",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [
+					0,
+					0.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "bone",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-1,
+								-0.05,
+								1.6
+							],
+							"size": [
+								2,
+								14.75,
+								2
+							],
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								-1,
+								-5.1119,
+								1.01983
+							],
+							"size": [
+								2,
+								7,
+								2.5
+							],
+							"pivot": [
+								0,
+								0.8881,
+								2.51983
+							],
+							"rotation": [
+								-90,
+								0,
+								0
+							],
+							"uv": [
+								8,
+								7
+							]
+						},
+						{
+							"origin": [
+								-1,
+								-0.05,
+								-3.45
+							],
+							"size": [
+								2,
+								5.75,
+								2
+							],
+							"uv": [
+								8,
+								0
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

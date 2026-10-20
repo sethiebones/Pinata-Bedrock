@@ -1,0 +1,17 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "vp:love_candy",
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.miscFood"
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "vp_love_candy"
+			}
+		}
+	}
+}

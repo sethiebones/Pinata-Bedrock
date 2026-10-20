@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.cursor.spin": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [
+						0,
+						"query.time_of_day * 360 * 200",
+						0
+					]
+				}
+			}
+		},
+		"animation.cursor.generic": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"scale": [
+						1,
+						"1/query.model_scale/10",
+						1
+					]
+				}
+			}
+		}
+	}
+}

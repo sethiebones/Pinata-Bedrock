@@ -1,0 +1,49 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.label_background_back": {
+			"geometry": "Geometry.label_background_back",
+			"materials": [
+				{
+					"*": "material.label"
+				}
+			],
+			"textures": [
+				"array.skins[query.property('vp:label_background_back')]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.label_background_back_0",
+						"Texture.label_background_back_1",
+						"Texture.label_background_back_2",
+						"Texture.label_background_back_3",
+						"Texture.label_background_back_4",
+						"Texture.label_background_back_5",
+						"Texture.label_background_back_6",
+						"Texture.label_background_back_7",
+						"Texture.label_background_back_8",
+						"Texture.label_background_back_9",
+						"Texture.label_background_back_10",
+						"Texture.label_background_back_11",
+						"Texture.label_background_back_12",
+						"Texture.label_background_back_13",
+						"Texture.label_background_back_14",
+						"Texture.label_background_back_15"
+					]
+				}
+			},
+			"is_hurt_color": {
+				"r": 1,
+				"g": 1,
+				"b": 1,
+				"a": 0
+			},
+			"part_visibility": [
+				{
+					"*": "!query.property('vp:busted') && !query.property('vp:egg') && !query.property('vp:cocoon')"
+				}
+			]
+		}
+	}
+}

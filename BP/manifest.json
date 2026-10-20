@@ -1,0 +1,68 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Seth",
+			"LunarBKO"
+		]
+	},
+	"header": {
+		"name": "Piñata Bedrock",
+		"description": "Piñata Bedrock",
+		"min_engine_version": [
+			1,
+			21,
+			0
+		],
+		"uuid": "d60f131f-eb51-4b3c-aedb-17f8a459f300",
+		"version": [
+			1,
+			0,
+			9
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "6271b64b-3a0f-4738-8c92-fe1a462166bc",
+			"version": [
+				1,
+				0,
+				2
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "e9d2b923-fa77-4600-b8a5-6ff87e94c525",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "12b69bc6-7919-44f5-b7ad-9b6d91d8276e",
+			"version": [
+				1,
+				0,
+				9
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.1.0"
+		},
+		{
+			"module_name": "@minecraft/server-gametest",
+			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.3.0-beta"
+		}
+	]
+}

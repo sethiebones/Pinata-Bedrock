@@ -1,0 +1,62 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.whirlm": {
+      "geometry": "array.geos[query.property('vp:egg')]",
+      "materials": [
+        {
+          "*": "material.default"
+        }
+      ],
+      "textures": ["array.skins[query.variant]"],
+      "arrays": {
+        "textures": {
+          "Array.skins": [
+            "Texture.wild",
+            "Texture.resident",
+            "Texture.variant1",
+            "Texture.variant2",
+            "Texture.variant3",
+            "Texture.egg",
+            "Texture.egg"
+          ]
+        },
+        "geometries": {
+          "Array.geos": ["Geometry.default", "Geometry.egg"]
+        }
+      },
+      "overlay_color": {
+        "r": "128 * query.is_angry + 10 * query.property('vp:sick') * !(q.is_leashed && !q.is_on_ground)",
+        "g": "255 * query.property('vp:sick') * !(q.is_leashed && !q.is_on_ground)",
+        "b": "80 * query.property('vp:sick') * !(q.is_leashed && !q.is_on_ground)",
+        "a": "0.0075 * query.is_angry + 0.0025 * query.property('vp:sick') * !(q.is_leashed && !q.is_on_ground)"
+      },
+      "is_hurt_color": {
+        "r": "128 * query.is_angry + 10 * query.property('vp:sick') * !(q.is_leashed && !q.is_on_ground)",
+        "g": "255 * query.property('vp:sick') * !(q.is_leashed && !q.is_on_ground)",
+        "b": "80 * query.property('vp:sick') * !(q.is_leashed && !q.is_on_ground)",
+        "a": "0.0075 * query.is_angry + 0.0025 * query.property('vp:sick') * !(q.is_leashed && !q.is_on_ground)"
+      },
+      "part_visibility": [
+        {
+          "*": "!query.property('vp:busted') && !query.property('vp:cocoon')"
+        },
+        {
+          "wildcard1": "query.property('vp:wildcard_1') && !query.property('vp:busted') && !query.property('vp:cocoon')"
+        },
+        {
+          "wildcard2": "query.property('vp:wildcard_2') && !query.property('vp:busted') && !query.property('vp:cocoon')"
+        },
+        {
+          "wildcard3": "query.property('vp:wildcard_3') && !query.property('vp:busted') && !query.property('vp:cocoon')"
+        },
+        {
+          "sleep": "query.is_sleeping || query.is_avoiding_mobs && !query.property('vp:busted') && !query.property('vp:cocoon')"
+        },
+        {
+          "sleep2": "query.is_sleeping || query.is_avoiding_mobs && !query.property('vp:busted') && !query.property('vp:cocoon')"
+        }
+      ]
+    }
+  }
+}

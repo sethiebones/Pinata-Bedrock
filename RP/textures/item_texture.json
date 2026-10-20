@@ -1,0 +1,204 @@
+{
+  "resource_pack_name": "Piñata Bedrock",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "vp_buttercup_petals": {
+      "textures": "textures/items/buttercup_flower"
+    },
+    "vp_buttercup_seed": {
+      "textures": "textures/items/buttercup_seed"
+    },
+    "vp_apple_seed": {
+      "textures": "textures/items/apple_seed"
+    },
+    "garden_sign": {
+      "textures": "textures/items/garden_sign"
+    },
+    "vp_love_candy": {
+      "textures": "textures/items/love_candy"
+    },
+    "vp_watercress_petals": {
+      "textures": "textures/items/watercress_petals"
+    },
+    "vp_watercress_seed": {
+      "textures": "textures/items/watercress_seed"
+    },
+    "vp_fertilizer_green": {
+      "textures": "textures/items/fertilizer_green"
+    },
+    "vp_fertilizer_yellow": {
+      "textures": "textures/items/fertilizer_yellow"
+    },
+    "vp_fertilizer_red": {
+      "textures": "textures/items/fertilizer_red"
+    },
+    "vp_orange_seed": {
+      "textures": "textures/items/orange_seed"
+    },
+    "vp_orange": {
+      "textures": "textures/items/orange"
+    },
+    "vp_chili": {
+      "textures": "textures/items/chili"
+    },
+    "vp_big_chili": {
+      "textures": "textures/items/big_chili"
+    },
+    "vp_giant_chili": {
+      "textures": "textures/items/giant_chili"
+    },
+    "vp_enormous_chili": {
+      "textures": "textures/items/enormous_chili"
+    },
+    "vp_chili_seed": {
+      "textures": "textures/items/chili_seed"
+    },
+    "vp_garden_sign": {
+      "textures": "textures/items/garden_sign"
+    },
+    "vp_journal": {
+      "textures": "textures/items/journal"
+    },
+    "vp_fertilizer_orange": {
+      "textures": "textures/items/fertilizer_orange"
+    },
+    "vp_net_level1": {
+      "textures": "textures/items/net1"
+    },
+    "vp_net_full": {
+      "textures": "textures/items/net_full"
+    },
+    "vp_bluebell_seed": {
+      "textures": "textures/items/bluebell_seed"
+    },
+    "vp_bluebell_petals": {
+      "textures": "textures/items/bluebell_petals"
+    },
+    "vp_fertilizer_blue": {
+      "textures": "textures/items/fertilizer_blue"
+    },
+    "vp_fertilizer_purple": {
+      "textures": "textures/items/fertilizer_purple"
+    },
+    "vp_turnip_seed": {
+      "textures": "textures/items/turnip_seed"
+    },
+    "vp_turnip": {
+      "textures": "textures/items/turnip"
+    },
+    "vp_big_turnip": {
+      "textures": "textures/items/big_turnip"
+    },
+    "vp_giant_turnip": {
+      "textures": "textures/items/giant_turnip"
+    },
+    "vp_enormous_turnip": {
+      "textures": "textures/items/enormous_turnip"
+    },
+    "vp_yam_seed": {
+      "textures": "textures/items/yam_seed"
+    },
+    "vp_yam": {
+      "textures": "textures/items/yam"
+    },
+    "vp_big_yam": {
+      "textures": "textures/items/big_yam"
+    },
+    "vp_giant_yam": {
+      "textures": "textures/items/giant_yam"
+    },
+    "vp_enormous_yam": {
+      "textures": "textures/items/enormous_yam"
+    },
+    "vp_big_radish": {
+      "textures": "textures/items/big_radish"
+    },
+    "vp_giant_radish": {
+      "textures": "textures/items/giant_radish"
+    },
+    "vp_enormous_radish": {
+      "textures": "textures/items/enormous_radish"
+    },
+    "vp_radish": {
+      "textures": "textures/items/radish"
+    },
+    "vp_radish_seed": {
+      "textures": "textures/items/radish_seed"
+    },
+    "vp_big_carrot": {
+      "textures": "textures/items/big_carrot"
+    },
+    "vp_carrot_seed": {
+      "textures": "textures/items/carrot_seed"
+    },
+    "vp_giant_carrot": {
+      "textures": "textures/items/giant_carrot"
+    },
+    "vp_enormous_carrot": {
+      "textures": "textures/items/enormous_carrot"
+    },
+    "vp_poppy_petals": {
+      "textures": "textures/items/poppy_petals"
+    },
+    "vp_poppy_seed": {
+      "textures": "textures/items/poppy_seed"
+    },
+    "vp_daisy_seed": {
+      "textures": "textures/items/daisy_seed"
+    },
+    "vp_daisy_petals": {
+      "textures": "textures/items/daisy_petals"
+    },
+    "vp_chocolate_coin": {
+      "textures": "textures/items/chocolate_coin"
+    },
+    "vp_pinata_candy": {
+      "textures": "textures/items/pinata_candy"
+    },
+    "vp_freebie_watering_can": {
+      "textures": "textures/items/watering_can"
+    },
+    "vp_corn_seed": {
+      "textures": "textures/items/vegetables/corn/corn_seed"
+    },
+    "vp_pumpkin_seed": {
+      "textures": "textures/items/vegetables/pumpkin/pumpkin_seed"
+    },
+    "vp_garlic_seed": {
+      "textures": "textures/items/vegetables/garlic/garlic_seed"
+    },
+    "vp_thistle_seed": {
+      "textures": "textures/items/weeds/thistle/thistle_seed"
+    },
+    "vp_thistle_flowerhead": {
+      "textures": "textures/items/weeds/thistle/thistle_flowerhead"
+    },
+    "vp_whirlm_life_candy": {
+      "textures": "textures/items/pinata/whirlm/whirlm_life_candy"
+    },
+    "vp_mousemallow_life_candy": {
+      "textures": "textures/items/pinata/mousemallow/mousemallow_life_candy"
+    },
+    "vp_freebie_shovel": {
+      "textures": "textures/items/shovels/freebie_shovel"
+    },
+    "vp_medicine": {
+      "textures": "textures/items/tinkers/medicine"
+    },
+    "vp_buzzlegum_honey": {
+      "textures": "textures/items/produce/buzzlegum_honey"
+    },
+    "vp_select": {
+      "textures": "textures/items/cursors/cursor"
+    },
+    "vp_direct": {
+      "textures": "textures/items/cursors/direct"
+    },
+    "vp_pengum_spawn": {
+      "textures": "textures/items/icons/pengum_sprite"
+    },
+    "vp_cursor_egg": {
+      "textures": "textures/items/misc/cursor"
+    }
+  }
+}

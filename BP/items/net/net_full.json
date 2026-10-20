@@ -1,0 +1,25 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "vp:net_full",
+			"menu_category": {
+				"is_hidden_in_commands": false
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "vp_net_full"
+			},
+			"minecraft:use_animation": "block",
+			// "minecraft:on_use_on": {
+			// 	"on_use_on": {
+			// 		"event": "vp:net"
+			// 	}
+			// },
+			"minecraft:entity_placer": {
+				"entity": "vp:block_interaction"
+			}
+		}
+	}
+}

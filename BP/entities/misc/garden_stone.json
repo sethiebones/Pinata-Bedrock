@@ -1,0 +1,56 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "vp:garden_stone",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"vp:die": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": true,
+				"push_towards_closest_space": true
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0.1,
+				"width": 0.1
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"queue_command": {
+					"command": "effect @s slow_falling infinite 2 true"
+				}
+			},
+			"minecraft:born": {
+				"queue_command": {
+					"command": "effect @s slow_falling infinite 2 true"
+				}
+			},
+			"vp:move_garden_stone": {},
+			"vp:die": {
+				"add": {
+					"component_groups": [
+						"vp:die"
+					]
+				}
+			}
+		}
+	}
+}

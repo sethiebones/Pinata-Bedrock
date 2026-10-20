@@ -1,0 +1,37 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "vp:cursor",
+			"materials": {
+				"default": "entity_emissive"
+			},
+			"textures": {
+				"inner": "textures/entity/misc/cursor_inner",
+				"outer": "textures/entity/misc/cursor_outer"
+			},
+			"geometry": {
+				"inner": "geometry.cursor.inner",
+				"outer": "geometry.cursor.outer"
+			},
+			"render_controllers": [
+				"controller.render.cursor.inner",
+				"controller.render.cursor.outer"
+			],
+			"spawn_egg": {
+				"texture": "vp_cursor_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"generic": "animation.cursor.generic",
+				"spin": "animation.cursor.spin"
+			},
+			"scripts": {
+				"animate": [
+					"generic",
+					"spin"
+				]
+			}
+		}
+	}
+}

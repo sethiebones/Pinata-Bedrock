@@ -1,0 +1,52 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "vp:leafos",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/characters/family/leafos/leafos"
+			},
+			"geometry": {
+				"default": "geometry.leafos"
+			},
+			"render_controllers": [
+				"controller.render.leafos"
+			],
+			"enable_attachables": true,
+			"spawn_egg": {
+				"base_color": "#9BED5C",
+				"overlay_color": "#F2EE9D"
+			},
+			"particle_effects": {
+				"tears": "vp:tears"
+			},
+			"animations": {
+				"controller": "controller.animation.leafos.controller",
+				"movement": "controller.animation.leafos.move.controller",
+				"general": "animation.leafos.general",
+				"move": "animation.leafos.move",
+				"look_at_target": "animation.common.look_at_target",
+				"cry": "animation.leafos.crying",
+				"present": "animation.leafos.present",
+				"presenting": "animation.leafos.presenting",
+				"holding_shovel": "animation.leafos.holding_shovel",
+				"holding_watering_can": "animation.leafos.holding_watering_can"
+			},
+			"scripts": {
+				"animate": [
+					"controller",
+					"movement",
+					{
+						"holding_shovel": "query.equipped_item_any_tag('slot.weapon.mainhand', 'vp:is_shovel')"
+					},
+					{
+						"holding_watering_can": "query.equipped_item_any_tag('slot.weapon.mainhand', 'vp:is_watering_can')"
+					}
+				]
+			}
+		}
+	}
+}

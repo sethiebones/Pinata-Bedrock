@@ -1,0 +1,36 @@
+{
+  "type": "minecraftBedrock",
+  "name": "Piñata Bedrock",
+  "namespace": "vp",
+  "authors": ["Seth", "LunarBKO"],
+  "targetVersion": "1.21.30",
+  "description": "Piñata Bedrock",
+  "experimentalGameplay": {
+    "enableGameTestFramework": true
+  },
+  "bdsProject": false,
+  "packs": {
+    "behaviorPack": "./BP",
+    "resourcePack": "./RP"
+  },
+  "worlds": ["./worlds/*"],
+  "compiler": {
+    "plugins": [
+      "generatorScripts",
+      "typeScript",
+      "entityIdentifierAlias",
+      "customEntityComponents",
+      "customItemComponents",
+      "customBlockComponents",
+      "customCommands",
+      "moLang",
+      "formatVersionCorrection",
+      [
+        "simpleRewrite",
+        {
+          "packName": "PiñataCraft"
+        }
+      ]
+    ]
+  }
+}

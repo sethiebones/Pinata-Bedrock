@@ -1,0 +1,67 @@
+{
+  "format_version": "1.19.0",
+  "animation_controllers": {
+    "controller.animation.leafos.controller": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "animations": ["general"],
+          "transitions": [
+            {
+              "cry": "query.property('vp:crying')"
+            },
+            {
+              "present": "query.is_item_equipped(0)"
+            }
+          ]
+        },
+        "cry": {
+          "animations": ["general", "cry"],
+          "transitions": [
+            {
+              "idle": "!query.property('vp:crying')"
+            }
+          ]
+        },
+        "present": {
+          "animations": ["present"],
+          "transitions": [
+            {
+              "presenting": "query.all_animations_finished"
+            }
+          ]
+        },
+        "presenting": {
+          "animations": ["presenting"],
+          "transitions": [
+            {
+              "idle": "!query.is_item_equipped(0)"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.leafos.move.controller": {
+      "initial_state": "idle",
+      "states": {
+        "idle": {
+          "transitions": [
+            {
+              "move": "q.ground_speed > 0.5"
+            }
+          ],
+          "blend_transition": 0.2
+        },
+        "move": {
+          "animations": ["move"],
+          "transitions": [
+            {
+              "idle": "q.ground_speed<0.5"
+            }
+          ],
+          "blend_transition": 0.2
+        }
+      }
+    }
+  }
+}

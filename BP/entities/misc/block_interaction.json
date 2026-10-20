@@ -1,0 +1,16 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "vp:block_interaction",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:instant_despawn": {}
+		},
+		"events": {}
+	}
+}

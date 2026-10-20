@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:item": {
+		"description": {
+			"identifier": "vp:chocolate_coin",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:use_modifiers": {
+				"use_duration": 1.6
+			},
+			"minecraft:food": {
+				"nutrition": 4,
+				"saturation_modifier": 1
+			},
+			"minecraft:icon": "vp_chocolate_coin",
+			"minecraft:use_animation": "eat"
+		}
+	}
+}

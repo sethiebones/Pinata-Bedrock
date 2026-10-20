@@ -1,0 +1,32 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "vp:whirlm_missile",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/pinata/whirlm/whirlm_missile"
+			},
+			"geometry": {
+				"default": "geometry.whirlm_missile"
+			},
+			"render_controllers": [
+				"controller.render.whirlm_missile"
+			],
+			"particle_effects": {
+				"missile": "vp:missile"
+			},
+			"animations": {
+				"flying": "animation.missile.flying",
+				"controller": "controller.animation.missile.controller"
+			},
+			"scripts": {
+				"animate": [
+					"controller"
+				]
+			}
+		}
+	}
+}

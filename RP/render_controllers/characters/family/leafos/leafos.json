@@ -1,0 +1,20 @@
+{
+  "format_version": "1.20.80",
+  "render_controllers": {
+    "controller.render.leafos": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": ["Texture.default"],
+      "is_hurt_color": {
+        "r": 1,
+        "g": 1,
+        "b": 1,
+        "a": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "vp:net_level1",
+			"category": "equipment"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "vp_net_level1"
+			},
+			"minecraft:max_stack_size": 1,
+			"minecraft:durability": {
+				"max_durability": 10
+			},
+			"minecraft:on_use_on": {
+				"on_use_on": {
+					"event": "vp:net"
+				}
+			},
+			"minecraft:use_animation": "block",
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": [
+							"copper_ingot"
+						],
+						"repair_amount": 2
+					}
+				]
+			}
+		}
+	}
+}

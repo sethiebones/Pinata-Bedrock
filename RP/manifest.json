@@ -1,0 +1,45 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Seth",
+			"LunarBKO"
+		]
+	},
+	"header": {
+		"name": "Piñata Bedrock",
+		"description": "Piñata Bedrock",
+		"min_engine_version": [
+			1,
+			21,
+			0
+		],
+		"uuid": "12b69bc6-7919-44f5-b7ad-9b6d91d8276e",
+		"version": [
+			1,
+			0,
+			9
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "0b5f4785-89ba-4879-8cf8-b9d3dbd0fddd",
+			"version": [
+				1,
+				0,
+				2
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "d60f131f-eb51-4b3c-aedb-17f8a459f300",
+			"version": [
+				1,
+				0,
+				9
+			]
+		}
+	]
+}

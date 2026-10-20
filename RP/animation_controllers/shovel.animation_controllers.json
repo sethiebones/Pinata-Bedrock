@@ -1,0 +1,56 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.shovel.controller": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"tap": "query.property('vp:animation') == 'tap'"
+						},
+						{
+							"whack": "query.property('vp:animation') == 'whack'"
+						},
+						{
+							"whack_soil": "query.property('vp:animation') == 'whack_soil'"
+						}
+					]
+				},
+				"tap": {
+					"animations": [
+						"tap"
+					],
+					"transitions": [
+						{
+							"idle": "query.property('vp:animation') != 'tap'"
+						}
+					]
+				},
+				"whack": {
+					"animations": [
+						"whack"
+					],
+					"transitions": [
+						{
+							"idle": "query.property('vp:animation') != 'whack'"
+						}
+					]
+				},
+				"whack_soil": {
+					"animations": [
+						"whack_soil"
+					],
+					"transitions": [
+						{
+							"idle": "query.property('vp:animation') != 'whack_soil'"
+						}
+					]
+				}
+			}
+		}
+	}
+}

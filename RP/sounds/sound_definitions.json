@@ -1,0 +1,114 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"vp.shovel_patting": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/vp_shovel_patting_1",
+					"volume": 1
+				},
+				{
+					"name": "sounds/vp_shovel_patting_2",
+					"volume": 1
+				},
+				{
+					"name": "sounds/vp_shovel_patting_3",
+					"volume": 1
+				},
+				{
+					"name": "sounds/vp_shovel_patting_4",
+					"volume": 1
+				},
+				{
+					"name": "sounds/vp_shovel_patting_5",
+					"volume": 1
+				},
+				{
+					"name": "sounds/vp_shovel_patting_6",
+					"volume": 1
+				},
+				{
+					"name": "sounds/vp_shovel_patting_7",
+					"volume": 1
+				},
+				{
+					"name": "sounds/vp_shovel_patting_8",
+					"volume": 1
+				}
+			]
+		},
+		"vp.cheer": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/vp_cheer",
+					"volume": 2
+				}
+			]
+		},
+		"vp.cursor_garden": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/vp_cursor_garden",
+					"volume": 0.5
+				}
+			]
+		},
+		"vp.cursor_in": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/vp_cursor_in",
+					"volume": 0.5
+				}
+			]
+		},
+		"vp.cursor_out": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/vp_cursor_out",
+					"volume": 0.5
+				}
+			]
+		},
+		"vp.whirlm_1": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/vp_whirlm_1",
+					"volume": 1
+				}
+			]
+		},
+		"vp.whirlm_2": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/vp_whirlm_2",
+					"volume": 1
+				}
+			]
+		},
+		"vp.whirlm_3": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/vp_whirlm_3",
+					"volume": 1
+				}
+			]
+		},
+		"vp.whirlm_4": {
+			"category": "neutral",
+			"sounds": [
+				{
+					"name": "sounds/vp_whirlm_4",
+					"volume": 1
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,86 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "vp:shovel_entity",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"properties": {
+				"vp:health": {
+					"type": "int",
+					"range": [
+						-1,
+						5
+					],
+					"default": "5",
+					"client_sync": true
+				},
+				"vp:animation": {
+					"type": "enum",
+					"values": [
+						"idle",
+						"tap",
+						"whack",
+						"whack_soil"
+					],
+					"default": "idle",
+					"client_sync": true
+				}
+			}
+		},
+		"component_groups": {},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"shovel",
+					"unselectable"
+				]
+			},
+			"minecraft:scale": {
+				"value": 0.8
+			},
+			"minecraft:collision_box": {
+				"height": 0.01,
+				"width": 0.01
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			}
+		},
+		"events": {
+			"vp:idle": {
+				"set_property": {
+					"vp:animation": "idle"
+				}
+			},
+			"vp:tap": {
+				"set_property": {
+					"vp:animation": "tap"
+				}
+			},
+			"vp:whack": {
+				"set_property": {
+					"vp:animation": "whack"
+				}
+			},
+			"vp:whack_soil": {
+				"set_property": {
+					"vp:animation": "whack_soil"
+				}
+			}
+		}
+	}
+}

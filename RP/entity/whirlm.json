@@ -1,0 +1,211 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "vp:whirlm",
+			"materials": {
+				"default": "entity_alphatest",
+				"label": "entity_alphatest"
+			},
+			"textures": {
+				"wild": "textures/entity/pinata/whirlm/whirlm_wild",
+				"resident": "textures/entity/pinata/whirlm/whirlm_res",
+				"variant1": "textures/entity/pinata/whirlm/whirlm_var1",
+				"variant2": "textures/entity/pinata/whirlm/whirlm_var2",
+				"variant3": "textures/entity/pinata/whirlm/whirlm_var3",
+				"egg": "textures/entity/pinata/whirlm/whirlm_egg",
+				"cocoon": "textures/entity/pinata/whirlm/whirlm_cocoon",
+				"label_background_back_0": "textures/entity/label/label_white",
+				"label_background_back_1": "textures/entity/label/label_light_gray",
+				"label_background_back_2": "textures/entity/label/label_dark_gray",
+				"label_background_back_3": "textures/entity/label/label_black",
+				"label_background_back_4": "textures/entity/label/label_brown",
+				"label_background_back_5": "textures/entity/label/label_red",
+				"label_background_back_6": "textures/entity/label/label_orange",
+				"label_background_back_7": "textures/entity/label/label_yellow",
+				"label_background_back_8": "textures/entity/label/label_lime",
+				"label_background_back_9": "textures/entity/label/label_green",
+				"label_background_back_10": "textures/entity/label/label_cyan",
+				"label_background_back_11": "textures/entity/label/label_light_blue",
+				"label_background_back_12": "textures/entity/label/label_blue",
+				"label_background_back_13": "textures/entity/label/label_purple",
+				"label_background_back_14": "textures/entity/label/label_magenta",
+				"label_background_back_15": "textures/entity/label/label_pink",
+				"label_background_zigzag_0": "textures/entity/label/backgrounds/label_background_zigzag_white",
+				"label_background_zigzag_1": "textures/entity/label/backgrounds/label_background_zigzag_light_gray",
+				"label_background_zigzag_2": "textures/entity/label/backgrounds/label_background_zigzag_dark_gray",
+				"label_background_zigzag_3": "textures/entity/label/backgrounds/label_background_zigzag_black",
+				"label_background_zigzag_4": "textures/entity/label/backgrounds/label_background_zigzag_brown",
+				"label_background_zigzag_5": "textures/entity/label/backgrounds/label_background_zigzag_red",
+				"label_background_zigzag_6": "textures/entity/label/backgrounds/label_background_zigzag_orange",
+				"label_background_zigzag_7": "textures/entity/label/backgrounds/label_background_zigzag_yellow",
+				"label_background_zigzag_8": "textures/entity/label/backgrounds/label_background_zigzag_lime",
+				"label_background_zigzag_9": "textures/entity/label/backgrounds/label_background_zigzag_green",
+				"label_background_zigzag_10": "textures/entity/label/backgrounds/label_background_zigzag_cyan",
+				"label_background_zigzag_11": "textures/entity/label/backgrounds/label_background_zigzag_light_blue",
+				"label_background_zigzag_12": "textures/entity/label/backgrounds/label_background_zigzag_blue",
+				"label_background_zigzag_13": "textures/entity/label/backgrounds/label_background_zigzag_purple",
+				"label_background_zigzag_14": "textures/entity/label/backgrounds/label_background_zigzag_magenta",
+				"label_background_zigzag_15": "textures/entity/label/backgrounds/label_background_zigzag_pink",
+				"label_logo_vp_1_0": "textures/entity/label/logos/label_logo_vp_1_white",
+				"label_logo_vp_1_1": "textures/entity/label/logos/label_logo_vp_1_light_gray",
+				"label_logo_vp_1_2": "textures/entity/label/logos/label_logo_vp_1_dark_gray",
+				"label_logo_vp_1_3": "textures/entity/label/logos/label_logo_vp_1_black",
+				"label_logo_vp_1_4": "textures/entity/label/logos/label_logo_vp_1_brown",
+				"label_logo_vp_1_5": "textures/entity/label/logos/label_logo_vp_1_red",
+				"label_logo_vp_1_6": "textures/entity/label/logos/label_logo_vp_1_orange",
+				"label_logo_vp_1_7": "textures/entity/label/logos/label_logo_vp_1_yellow",
+				"label_logo_vp_1_8": "textures/entity/label/logos/label_logo_vp_1_lime",
+				"label_logo_vp_1_9": "textures/entity/label/logos/label_logo_vp_1_green",
+				"label_logo_vp_1_10": "textures/entity/label/logos/label_logo_vp_1_cyan",
+				"label_logo_vp_1_11": "textures/entity/label/logos/label_logo_vp_1_light_blue",
+				"label_logo_vp_1_12": "textures/entity/label/logos/label_logo_vp_1_blue",
+				"label_logo_vp_1_13": "textures/entity/label/logos/label_logo_vp_1_purple",
+				"label_logo_vp_1_14": "textures/entity/label/logos/label_logo_vp_1_magenta",
+				"label_logo_vp_1_15": "textures/entity/label/logos/label_logo_vp_1_pink",
+				"label_logo_vp_2_0": "textures/entity/label/logos/label_logo_vp_2_white",
+				"label_logo_vp_2_1": "textures/entity/label/logos/label_logo_vp_2_light_gray",
+				"label_logo_vp_2_2": "textures/entity/label/logos/label_logo_vp_2_dark_gray",
+				"label_logo_vp_2_3": "textures/entity/label/logos/label_logo_vp_2_black",
+				"label_logo_vp_2_4": "textures/entity/label/logos/label_logo_vp_2_brown",
+				"label_logo_vp_2_5": "textures/entity/label/logos/label_logo_vp_2_red",
+				"label_logo_vp_2_6": "textures/entity/label/logos/label_logo_vp_2_orange",
+				"label_logo_vp_2_7": "textures/entity/label/logos/label_logo_vp_2_yellow",
+				"label_logo_vp_2_8": "textures/entity/label/logos/label_logo_vp_2_lime",
+				"label_logo_vp_2_9": "textures/entity/label/logos/label_logo_vp_2_green",
+				"label_logo_vp_2_10": "textures/entity/label/logos/label_logo_vp_2_cyan",
+				"label_logo_vp_2_11": "textures/entity/label/logos/label_logo_vp_2_light_blue",
+				"label_logo_vp_2_12": "textures/entity/label/logos/label_logo_vp_2_blue",
+				"label_logo_vp_2_13": "textures/entity/label/logos/label_logo_vp_2_purple",
+				"label_logo_vp_2_14": "textures/entity/label/logos/label_logo_vp_2_magenta",
+				"label_logo_vp_2_15": "textures/entity/label/logos/label_logo_vp_2_pink",
+				"label_border_tris_1_0": "textures/entity/label/borders/label_border_tris_1_white",
+				"label_border_tris_1_1": "textures/entity/label/borders/label_border_tris_1_light_gray",
+				"label_border_tris_1_2": "textures/entity/label/borders/label_border_tris_1_dark_gray",
+				"label_border_tris_1_3": "textures/entity/label/borders/label_border_tris_1_black",
+				"label_border_tris_1_4": "textures/entity/label/borders/label_border_tris_1_brown",
+				"label_border_tris_1_5": "textures/entity/label/borders/label_border_tris_1_red",
+				"label_border_tris_1_6": "textures/entity/label/borders/label_border_tris_1_orange",
+				"label_border_tris_1_7": "textures/entity/label/borders/label_border_tris_1_yellow",
+				"label_border_tris_1_8": "textures/entity/label/borders/label_border_tris_1_lime",
+				"label_border_tris_1_9": "textures/entity/label/borders/label_border_tris_1_green",
+				"label_border_tris_1_10": "textures/entity/label/borders/label_border_tris_1_cyan",
+				"label_border_tris_1_11": "textures/entity/label/borders/label_border_tris_1_light_blue",
+				"label_border_tris_1_12": "textures/entity/label/borders/label_border_tris_1_blue",
+				"label_border_tris_1_13": "textures/entity/label/borders/label_border_tris_1_purple",
+				"label_border_tris_1_14": "textures/entity/label/borders/label_border_tris_1_magenta",
+				"label_border_tris_1_15": "textures/entity/label/borders/label_border_tris_1_pink",
+				"label_border_tris_2_0": "textures/entity/label/borders/label_border_tris_2_white",
+				"label_border_tris_2_1": "textures/entity/label/borders/label_border_tris_2_light_gray",
+				"label_border_tris_2_2": "textures/entity/label/borders/label_border_tris_2_dark_gray",
+				"label_border_tris_2_3": "textures/entity/label/borders/label_border_tris_2_black",
+				"label_border_tris_2_4": "textures/entity/label/borders/label_border_tris_2_brown",
+				"label_border_tris_2_5": "textures/entity/label/borders/label_border_tris_2_red",
+				"label_border_tris_2_6": "textures/entity/label/borders/label_border_tris_2_orange",
+				"label_border_tris_2_7": "textures/entity/label/borders/label_border_tris_2_yellow",
+				"label_border_tris_2_8": "textures/entity/label/borders/label_border_tris_2_lime",
+				"label_border_tris_2_9": "textures/entity/label/borders/label_border_tris_2_green",
+				"label_border_tris_2_10": "textures/entity/label/borders/label_border_tris_2_cyan",
+				"label_border_tris_2_11": "textures/entity/label/borders/label_border_tris_2_light_blue",
+				"label_border_tris_2_12": "textures/entity/label/borders/label_border_tris_2_blue",
+				"label_border_tris_2_13": "textures/entity/label/borders/label_border_tris_2_purple",
+				"label_border_tris_2_14": "textures/entity/label/borders/label_border_tris_2_magenta",
+				"label_border_tris_2_15": "textures/entity/label/borders/label_border_tris_2_pink",
+				"label_empty": "textures/entity/label/label_empty",
+				"label_logo_1": "textures/entity/label/logos/label_logo_vp",
+				"label_border_0": "textures/entity/label/label_empty",
+				"label_border_1": "textures/entity/label/borders/label_border_vp"
+			},
+			"particle_effects": {
+				"romance": "vp:romance",
+				"sleeping": "vp:sleeping",
+				"bust": "vp:bust",
+				"busted": "vp:busted",
+				"dizzy": "vp:dizzy"
+			},
+			"sound_effects": {
+				"whirlm_1": "vp.whirlm_1",
+				"whirlm_2": "vp.whirlm_2",
+				"whirlm_3": "vp.whirlm_3",
+				"whirlm_4": "vp.whirlm_4"
+			},
+			"geometry": {
+				"default": "geometry.whirlm",
+				"egg": "geometry.pinata_egg",
+				"cocoon": "geometry.whirlm_cocoon",
+				"label_background_back": "geometry.label_background_back",
+				"label_background_front": "geometry.label_background_front",
+				"label_logo_back": "geometry.label_logo_back",
+				"label_logo_front": "geometry.label_logo_front",
+				"label_border_back": "geometry.label_border_back",
+				"label_border_front": "geometry.label_border_front"
+			},
+			"render_controllers": [
+				{
+					"controller.render.whirlm": 1
+				},
+				{
+					"controller.render.label_background_back": 1
+				},
+				{
+					"controller.render.label_background_front": 1
+				},
+				{
+					"controller.render.label_logo_back": 1
+				},
+				{
+					"controller.render.label_logo_front": 1
+				},
+				{
+					"controller.render.label_border_back": 1
+				},
+				{
+					"controller.render.label_border_front": 1
+				},
+				{
+					"controller.render.whirlm_cocoon": "query.property('vp:cocoon')"
+				}
+			],
+			"spawn_egg": {
+				"base_color": "#E68F37",
+				"overlay_color": "#BC1D30"
+			},
+			"animations": {
+				"egg_idle": "animation.pinata_egg.idle",
+				"hatching": "animation.pinata_egg.hatching",
+				"idle": "animation.whirlm.idle",
+				"walk": "animation.whirlm.walk",
+				"climb": "animation.whirlm.climb",
+				"sleep": "animation.whirlm.sleep",
+				"run": "animation.whirlm.run",
+				"eating": "animation.whirlm.eating",
+				"romance": "animation.whirlm.romance",
+				"nomance": "animation.whirlm.nomance",
+				"attack": "animation.whirlm.attack",
+				"awaiting_attack": "animation.whirlm.awaiting_attack",
+				"taunt": "animation.whirlm.taunt",
+				"dodge": "animation.whirlm.dodge",
+				"sick": "animation.whirlm.sick",
+				"bust": "animation.whirlm.bust",
+				"busted": "animation.whirlm.busted",
+				"dizzy": "animation.whirlm.dizzy",
+				"cocoon_grow": "animation.cocoon.grow",
+				"look_at_target": "animation.whirlm.look_at_target",
+				"controller": "controller.animation.whirlm.controller",
+				"romance_controller": "controller.animation.whirlm.romance.controller",
+				"label": "animation.whirlm.label"
+			},
+			"scripts": {
+				"animate": [
+					"controller",
+					"look_at_target",
+					"romance_controller",
+					{
+						"cocoon_grow": "query.property('vp:cocoon')"
+					},
+					"label"
+				]
+			}
+		}
+	}
+}

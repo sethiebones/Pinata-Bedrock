@@ -1,0 +1,48 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "vp:whirlm_missile",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"vp:die": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": false,
+				"push_towards_closest_space": false
+			},
+			"minecraft:scale": {
+				"value": 0.25
+			},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "inactivity_timer",
+							"subject": "self",
+							"operator": ">",
+							"value": 5
+						},
+						"event": "vp:die"
+					}
+				]
+			}
+		},
+		"events": {
+			"vp:die": {
+				"add": {
+					"component_groups": [
+						"vp:die"
+					]
+				}
+			}
+		}
+	}
+}

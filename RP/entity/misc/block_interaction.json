@@ -1,0 +1,20 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "vp:block_interaction",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/empty"
+			},
+			"geometry": {
+				"default": "geometry.block_interaction"
+			},
+			"render_controllers": [
+				"controller.render.block_interaction"
+			]
+		}
+	}
+}

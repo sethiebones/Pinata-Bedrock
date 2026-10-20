@@ -1,0 +1,14 @@
+#auto
+Desktop.ini    
+.DS_Store 
+!.bridge/
+.bridge/*
+!.bridge/compiler/
+!.bridge/extensions
+
+#added
+.bridge
+.vscode
+builds
+deno.json
+node_modules

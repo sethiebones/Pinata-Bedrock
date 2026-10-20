@@ -1,0 +1,24 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "vp:garden",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/garden"
+			},
+			"geometry": {
+				"default": "geometry.garden"
+			},
+			"render_controllers": [
+				"controller.render.garden"
+			],
+			"spawn_egg": {
+				"base_color": "#FFFFFF",
+				"overlay_color": "#000000"
+			}
+		}
+	}
+}
